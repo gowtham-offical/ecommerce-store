@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modern Goods — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Modern<span>Goods</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Shop</a>
+      <a href="cart.html">Cart <span class="nav-cart-count" id="navCartCount" style="display:none;">0</span></a>
+      <span id="navAuthLinks"></span>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">New Arrivals Weekly</span>
+    <h1>Everyday goods, thoughtfully made.</h1>
+    <p>Shop a small, considered collection of electronics, home essentials, apparel and accessories — all in one place.</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="filters-bar">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+    </select>
+  </div>
+
+  <h2 class="section-title">All Products</h2>
+  <div class="product-grid" id="productGrid">
+    <p class="loading-text">Loading products...</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    &copy; 2026 Modern Goods. Built as a demo e-commerce project.
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script>
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
